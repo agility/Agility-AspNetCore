@@ -1,0 +1,40 @@
+﻿@using Website.Helpers
+@using Agility.Web.Mvc
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Start: Top Page and Global Scripts-->
+    @Html.RenderAgilityTopScripts()
+    <!-- End: Top Page and Global Scripts -->
+
+    @Html.RenderAgilityCss()
+    
+    <environment exclude="Development">
+        <!-- Style bundle only used in production build -->
+        <link rel="stylesheet" href="~/dist/main.css" asp-append-version="true" />
+    </environment>
+
+</head>
+<body>
+    <!-- Start: Inner Page Template Render -->
+    @RenderBody()
+    <!-- End: Inner Page Template Render -->
+
+    <!-- Start: Agility Preview Bar + Bottom Page and Global Scripts -->
+    @Html.RenderAgilityScripts()
+    <!-- End: Agility Preview Bar + Bottom Page and Global Scripts -->
+
+    <!-- Start: Compute/Set UGC Hash  -->
+    @Html.GetUGCDataServiceInitializationScript()
+    <!-- End: Compute/Set Hash -->
+
+    <!-- Start: Main JS Bundle -->
+    <script src="~/dist/main.js" type="text/javascript" asp-append-version="true"></script>
+    <!-- End  Main JS Bundle -->
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
