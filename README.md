@@ -1,1 +1,1 @@
-# Agility-AspNetCore-Vanilla
+# Agility .NET Core Vanilla Template
