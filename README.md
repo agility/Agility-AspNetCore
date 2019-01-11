@@ -65,5 +65,69 @@ Website> dotnet run
 ```
 Website\wwwroot> npm run dev
 ```
-
 You should now have the site running on http://localhost:8080/.
+
+## Agility Modules 
+In a traditional ASP.NET MVC project, Controllers and Actions are used to render Agility Modules. ASP.NET Core replaces them with ViewComponents. Using ViewComponents enables Agility.Web for ASP.NET Core to render modules on a page asynchronously.
+
+
+In Agility, you set the *Output Template* for a module to be a View Component which corresponds to the name of your ViewComponent class.
+
+If you have a module with a View Component Name set to *Callout*, then Agility.Web will look for a ViewComponent in your website.
+
+**CalloutViewComponent.cs**:
+``` csharp
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Website;
+using Website.AgilityModels;
+using Agility.Web.Extensions;
+
+namespace Website.ViewComponents.Modules
+{
+    public class Callout: ViewComponent
+    {
+
+        public Task<IViewComponentResult> InvokeAsync(Module_Callout module) 
+        {
+            return Task.Run<IViewComponentResult>(() =>
+            {
+                return View("~/Views/Modules/Callout.cshtml", module);
+            });
+        }
+
+    }
+
+}
+```
+
+**Callout.cshtml**:
+``` html
+@model Website.AgilityModels.Module_Callout
+
+@if(Model.Image != null)
+{
+    <img src="@Model.Image.URL?w=200" alt="@Model.Image.Label" />
+}
+
+
+<h1>@Model.Title</h1>
+
+@Html.Raw(Model.TextBlob)
+```
+
+## Creating a Production Build
+When ready to deploy a website built on this template, you'll need to build both your backend and frontend.
+
+1. In a terminal, run the following command to build the frontend:
+```
+Website\wwwroot> npm run build
+```
+
+2. In a terminal, run the following command to build the backend - [see dotnet publish](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21) for more information on this:
+```
+Website> dotnet publish --configuration Release
+```
