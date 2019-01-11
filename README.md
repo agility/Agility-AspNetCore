@@ -62,13 +62,5 @@ Website> dotnet run
 ```
 Website\wwwroot> npm run dev
 ```
-<<<<<<< HEAD
+
 You should now have the site running on http://localhost:8080/.
-=======
-You should now have the site running on http://localhost:8080/.
-
-
-
-
-
->>>>>>> ba71f91e779a67194c4da692926c75699457a415
