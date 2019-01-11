@@ -19,7 +19,10 @@ This is the *fastest* way to get started with Agility and build high-performance
 - Modern frontend tools
 
 ## How to Get Set Up
-In order to connect this website to an Agility instance, you'll need a Website Name, Security Key, and UGC API credentials. If you don't have this, please contact support@agilitycms.com and we can assist you.
+In order to connect this website to an Agility instance, you'll need a Website Name, Security Key, and UGC API credentials. If you don't have this, please contact support@agilitycms.com and we can assist you. 
+
+In addition, the Agility instance must have its **Development Language** set to *ASP.NET Core*. This can be done in **Agility > Settings > Customization/Development / Development Framework**.
+
 
 1. Clone/Download this repository.
 2. Open the repository in your favorite IDE - we recommend VS Code.

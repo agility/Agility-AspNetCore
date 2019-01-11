@@ -43,11 +43,8 @@ C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Website.TagHelpers.input.cache
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Website.TagHelpers.output.cache
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Website.RazorCoreGenerate.cache
-C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
-C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\Modules\PanelSlider.g.cshtml.cs
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
-C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\Templates\MainTemplate.g.cshtml.cs
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Website.RazorTargetAssemblyInfo.cache
@@ -56,3 +53,5 @@ C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Website.dll
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Website.pdb
 C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Website.csproj.CopyComplete
+C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\Modules\Callout.g.cshtml.cs
+C:\Users\James Vidler\Source\Repos\Agility-AspNetCore-Vanilla\Agility-AspNetCore-Vanilla\Website\obj\Debug\netcoreapp2.1\Razor\Views\Templates\BlankTemplate.g.cshtml.cs

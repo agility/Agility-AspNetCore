@@ -1,0 +1,13 @@
+@model Website.AgilityModels.Module_Callout
+
+@if(Model.Image != null)
+{
+    <img src="@Model.Image.URL?w=200" alt="@Model.Image.Label" />
+}
+
+
+<h1>@Model.Title</h1>
+
+@Html.Raw(Model.TextBlob)
+
+

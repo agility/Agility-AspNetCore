@@ -55,25 +55,16 @@ namespace Website.AgilityModels
 		public virtual bool Minify { get { if (!__minify_set) __minify = GetFieldValue<bool>("Minify"); __minify_set = true; return __minify; } set { __minify = value; __minify_set = true;  } }
 
 	}
-	public partial class ContentPanel : Agility.Web.AgilityContentItem
+	public partial class Module_Callout : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
 		private bool __title_set = false;
 		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
-		private string __textarea = null;
-		private bool __textarea_set = false;
-		public virtual string Textarea { get { if (!__textarea_set) __textarea = GetFieldValue<string>("Textarea"); __textarea_set = true; return __textarea; } set { __textarea = value; __textarea_set = true;  } }
-		private string __primarybutton = null;
-		private bool __primarybutton_set = false;
-		public virtual string PrimaryButton { get { if (!__primarybutton_set) __primarybutton = GetFieldValue<string>("PrimaryButton"); __primarybutton_set = true; return __primarybutton; } set { __primarybutton = value; __primarybutton_set = true;  } }
-		private string __secondarybutton = null;
-		private bool __secondarybutton_set = false;
-		public virtual string SecondaryButton { get { if (!__secondarybutton_set) __secondarybutton = GetFieldValue<string>("SecondaryButton"); __secondarybutton_set = true; return __secondarybutton; } set { __secondarybutton = value; __secondarybutton_set = true;  } }
+		private string __textblob = null;
+		private bool __textblob_set = false;
+		public virtual string TextBlob { get { if (!__textblob_set) __textblob = GetFieldValue<string>("TextBlob"); __textblob_set = true; return __textblob; } set { __textblob = value; __textblob_set = true;  } }
 		private Attachment __image = null;
 		public virtual Attachment Image { get {  if (__image == null) __image = GetAttachment("Image"); return __image; } set { __image = value; } }
-		private string __imageposition = null;
-		private bool __imageposition_set = false;
-		public virtual string ImagePosition { get { if (!__imageposition_set) __imageposition = GetFieldValue<string>("ImagePosition"); __imageposition_set = true; return __imageposition; } set { __imageposition = value; __imageposition_set = true;  } }
 
 	}
 	public partial class Module_FormBuilder : Agility.Web.AgilityContentItem
@@ -120,15 +111,6 @@ namespace Website.AgilityModels
 		private bool __submitintougc;
 		private bool __submitintougc_set = false;
 		public virtual bool SubmitIntoUGC { get { if (!__submitintougc_set) __submitintougc = GetFieldValue<bool>("SubmitIntoUGC"); __submitintougc_set = true; return __submitintougc; } set { __submitintougc = value; __submitintougc_set = true;  } }
-
-	}
-	public partial class Module_PanelSlider : Agility.Web.AgilityContentItem
-	{
-		private string __panelsids = null;
-		private bool __panelsids_set = false;
-		public virtual string PanelsIDs { get { if (!__panelsids_set) __panelsids = GetFieldValue<string>("PanelsIDs"); __panelsids_set = true; return __panelsids; } set { __panelsids = value; __panelsids_set = true;  } }
-		private IAgilityContentRepository<ContentPanel> __panels = null;
-		public virtual IAgilityContentRepository<ContentPanel> Panels { get { if (__panels == null) __panels = GetLinkedContent<ContentPanel>("Panels"); return __panels; } set { __panels = value; }}
 
 	}
 	public partial class Module_RichTextArea : Agility.Web.AgilityContentItem
