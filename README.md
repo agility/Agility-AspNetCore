@@ -131,3 +131,9 @@ Website\wwwroot> npm run build
 ```
 Website> dotnet publish --configuration Release
 ```
+
+# Found a Bug?
+If you find an issue in the Agility.AspNetCore package, please open an 'Issue' in this repository and we'll take a look. Found a bug in the website template and would like to commit your fix? Please see **Want to Contribute?** below.
+
+# Want to Contribute?
+Do you have something you want to add to this template that you think will benefit others? If so, please use the *fork and pull* model so you can fork this repository and push changes to your personal fork. Then, open a pull request and we can merged it into this repository.
