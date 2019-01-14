@@ -18,6 +18,9 @@ This is the *fastest* way to get started with Agility and build high-performance
 - Cross-platform development and hosting
 - Modern frontend tools
 
+## Coming Soon
+The entire Agility.Web/AspNetCore dll package will be **open sourced** and added to this repository, allowing external developers to debug, and extend the package. For now, this package is referenced through a Nuget package only.
+
 ## How to Get Set Up
 In order to connect this website to an Agility instance, you'll need a Website Name, Security Key, and UGC API credentials. If you don't have this, please contact support@agilitycms.com and we can assist you. 
 
