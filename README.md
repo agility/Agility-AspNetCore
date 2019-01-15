@@ -1,4 +1,4 @@
-# Agility .NET Core Vanilla Template
+# Agility for .NET Core
 This is a starter template for developers who want to use ASP.NET Core, and the Agility.AspNetCore/Agility.Web SDK to sync content and provide an interface to access content without making API calls. The Agility.AspNetCore/Agility.Web SDK also manages page routing, caching and more.
 
 This is the *fastest* way to get started with Agility and build high-performance websites out-of-the-box. 
