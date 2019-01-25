@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Agility.AspNetCore/0.0.1.7": {
+      "Agility.AspNetCore/0.0.1.11": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.6",
@@ -5384,14 +5384,14 @@
     }
   },
   "libraries": {
-    "Agility.AspNetCore/0.0.1.7": {
-      "sha512": "9i6yfke34Oi+EZu1laZMvEKGbvr56YeoLd/N4WeAWJmrZV/fzJo6egVOBMawoLhCYYei3+Ta7H8IQZFIpuydhQ==",
+    "Agility.AspNetCore/0.0.1.11": {
+      "sha512": "LeyVqYccZXvqCGvyAPfNCHRXQprJJ7bY4mjeefb3WNtQ4zRWjwhorNEVzknzyJG8GjxY9T/IxeJ6fGTKHZqvWA==",
       "type": "package",
-      "path": "agility.aspnetcore/0.0.1.7",
+      "path": "agility.aspnetcore/0.0.1.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "agility.aspnetcore.0.0.1.7.nupkg.sha512",
+        "agility.aspnetcore.0.0.1.11.nupkg.sha512",
         "agility.aspnetcore.nuspec",
         "lib/netcoreapp2.1/AgilityWebCore.dll"
       ]
@@ -14458,7 +14458,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Agility.AspNetCore >= 0.0.1.7",
+      "Agility.AspNetCore >= 0.0.1.11",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -14470,11 +14470,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\James Vidler\\Source\\Repos\\Agility-AspNetCore-Vanilla\\Agility-AspNetCore-Vanilla\\Website\\Website.csproj",
+      "projectUniqueName": "c:\\Users\\James Vidler\\Source\\Repos\\Agility-AspNetCore\\Website\\Website.csproj",
       "projectName": "Website",
-      "projectPath": "C:\\Users\\James Vidler\\Source\\Repos\\Agility-AspNetCore-Vanilla\\Agility-AspNetCore-Vanilla\\Website\\Website.csproj",
+      "projectPath": "c:\\Users\\James Vidler\\Source\\Repos\\Agility-AspNetCore\\Website\\Website.csproj",
       "packagesPath": "C:\\Users\\James Vidler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\James Vidler\\Source\\Repos\\Agility-AspNetCore-Vanilla\\Agility-AspNetCore-Vanilla\\Website\\obj\\",
+      "outputPath": "c:\\Users\\James Vidler\\Source\\Repos\\Agility-AspNetCore\\Website\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14507,7 +14507,7 @@
         "dependencies": {
           "Agility.AspNetCore": {
             "target": "Package",
-            "version": "[0.0.1.7, )"
+            "version": "[0.0.1.11, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
