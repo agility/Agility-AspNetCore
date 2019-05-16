@@ -5,6 +5,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App"/>
-    <PackageReference Include="Agility.AspNetCore" Version="0.0.1.11"/>
+    <PackageReference Include="Agility.AspNetCore" Version="0.0.1.18"/>
   </ItemGroup>
 </Project>

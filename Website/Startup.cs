@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Agility.Web;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace Website
 {
@@ -26,7 +27,7 @@ namespace Website
 		public IConfiguration Configuration { get; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
-		public void ConfigureServices(IServiceCollection services)
+		public IServiceProvider  ConfigureServices(IServiceCollection services)
 		{
 
 			services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -36,11 +37,10 @@ namespace Website
 				.AddApplicationPart(assembly)
 				.AddControllersAsServices();
 
-			//joelv: i think this was throwing an error..
-			//.SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
 			AgilityContext.ConfigureServices(services, Configuration);
 
+			// Build the intermediate service provider then return it
+			return services.BuildServiceProvider();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +55,18 @@ namespace Website
 			{
 				app.UseExceptionHandler("/Home/Error");
 			}
+
+			app.UseExceptionHandler(appError =>
+			{
+				appError.Run(async context =>
+				{
+					var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+					if (contextFeature != null)
+					{
+						Agility.Web.Tracing.WebTrace.WriteException(contextFeature.Error);
+					}
+				});
+			});
 
 			//configure the Agility Context 
 			Agility.Web.AgilityContext.Configure(app, env, useResponseCaching: true);

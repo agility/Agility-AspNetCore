@@ -62,3 +62,6 @@ typings/
 
 #dotnet bin directory
 bin
+
+#obj directory
+obj
