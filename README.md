@@ -60,6 +60,8 @@ In addition, the Agility instance must have its **Development Language** set to 
   }
 }
 ```
+**Note:** *When connecting this to your instance, your instance may have Modules or Page Templates that will need corresponding code to be implemented within the website. If you see any errors around Page Templates not found or missing a corresponding ViewComponent, then ensure you add the appropriate dependencies for your instance. Sometimes the easiest way to get this up and running is to initialize the files and just have them output some sample HTML*
+
 4. Open a terminal and start the dotnet site (backend) - this should restore packages, build the site and start running the site
 ```
 Website> dotnet run
