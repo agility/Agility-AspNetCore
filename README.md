@@ -1,5 +1,8 @@
 # Agility for .NET Core
-This is a starter template for developers who want to use ASP.NET Core, and the Agility.AspNetCore/Agility.Web SDK to sync content and provide an interface to access content without making API calls. The Agility.AspNetCore/Agility.Web SDK also manages page routing, caching and more.
+This is a starter template for developers who want to use ASP.NET Core.
+
+It uses the open-source [`Agility.AspNetCore SDK`](https://github.com/agility/Agility.AspNetCore) which handles page routing, rendering, multi-language, redirections and syncing content from Agility CMS. Find a problem within the SDK? Open an [issue](https://github.com/agility/Agility.AspNetCore/issues).
+
 
 This is the *fastest* way to get started with Agility and build high-performance websites out-of-the-box. 
 
@@ -17,9 +20,6 @@ This is the *fastest* way to get started with Agility and build high-performance
 - Agility Modules are executed asnychronously
 - Cross-platform development and hosting
 - Modern frontend tools
-
-## Coming Soon
-The entire Agility.Web/AspNetCore dll package will be **open sourced** and added to this repository, allowing external developers to debug, and extend the package. For now, this package is referenced through a Nuget package only.
 
 ## How to Get Set Up
 In order to connect this website to an Agility instance, you'll need a Website Name, Security Key, and UGC API credentials. If you don't have this, please contact support@agilitycms.com and we can assist you. 
@@ -136,9 +136,6 @@ Website\wwwroot> npm run build
 ```
 Website> dotnet publish --configuration Release
 ```
-
-# Found a Bug?
-If you find an issue in the Agility.AspNetCore package, please open an 'Issue' in this repository and we'll take a look. Found a bug in the website template and would like to commit your fix? Please see **Want to Contribute?** below.
 
 # Want to Contribute?
 Do you have something you want to add to this template that you think will benefit others? If so, please use the *fork and pull* model so you can fork this repository and push changes to your personal fork. Then, open a pull request and we can merged it into this repository.
