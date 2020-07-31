@@ -30,6 +30,9 @@ In addition, the Agility instance must have its **Development Language** set to 
 1. Clone/Download this repository.
 2. Open the repository in your favorite IDE - we recommend VS Code.
 3. Open and edit the file **Website\appsettings.json** and set the **websiteName** and **securityKey** 
+
+[How to Retrieve your Website Name and Security Key](https://help.agilitycms.com/hc/en-us/articles/360029220591-How-to-Retrieve-an-Instance-s-Security-Key)
+
 ``` javascript
 {
   "Logging": {
