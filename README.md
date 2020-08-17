@@ -52,6 +52,7 @@ In addition, the Agility instance must have its **Development Language** set to 
       "traceLevel": "Warning",
       "logFilePath": "d:/home/AgilityLogs/Website.log"
     },
+    "debugSync": "false",
     "UGC": {
       "Url": "https://ugc.agilitycms.com/",
       "Key": "{optional}",
