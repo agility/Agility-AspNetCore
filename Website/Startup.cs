@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Agility.Web;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.Extensions.Hosting;
 
 namespace Website
 {
@@ -31,11 +26,13 @@ namespace Website
 		{
 
 			services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-			var assembly = typeof(Startup).GetTypeInfo().Assembly;
+            services.AddRazorPages().AddRazorRuntimeCompilation();
 
-			services.AddMvc()
-				.AddApplicationPart(assembly)
-				.AddControllersAsServices();
+            // If using IIS:
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
 
 			AgilityContext.ConfigureServices(services, Configuration);
 
@@ -43,8 +40,8 @@ namespace Website
 			return services.BuildServiceProvider();
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
 			{
@@ -68,22 +65,26 @@ namespace Website
 				});
 			});
 
-			//configure the Agility Context 
-			Agility.Web.AgilityContext.Configure(app, env, useResponseCaching: true);
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            //configure the Agility Context 
+            AgilityContext.Configure(app, env);
 
 			app.UseStaticFiles();
 
-			app.UseMvc(routes =>
-			{
-				//Agility Builtin Route
-				routes.MapRoute("Agility", "{*sitemapPath}", new { controller = "Agility", action = "RenderPage" },
-					new { isAgilityPath = new Agility.Web.Mvc.AgilityRouteConstraint() });
+            app.UseEndpoints(endpoints =>
+            {
+                //Agility Builtin Route
+                endpoints.MapControllerRoute("Agility", "{*sitemapPath}", new { controller = "Agility", action = "RenderPage" },
+           new { isAgilityPath = new Agility.Web.Mvc.AgilityRouteConstraint() });
 
-				routes.MapRoute(
-					name: "default",
-					template: "{controller=Home}/{action=Index}/{id?}");
-			});
+                endpoints.MapControllerRoute(
+           "default",
+           "{controller=Home}/{action=Index}/{id?}");
+            });
 
-		}
+        }
 	}
 }
