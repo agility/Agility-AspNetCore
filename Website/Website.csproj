@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>3239af62-af73-4c90-af5c-e3997ae8ec4d</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Agility.AspNetCore" Version="1.0.0" />
