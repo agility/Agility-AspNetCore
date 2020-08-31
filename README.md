@@ -9,7 +9,7 @@ It uses the open-source [`Agility.AspNetCore SDK`](https://github.com/agility/Ag
 This is the *fastest* way to get started with Agility and build high-performance websites out-of-the-box. 
 
 **Backend:**
-- .NET Core 2.1
+- .NET Core 3.1
 
 **Frontend:**
 - npm and webpack
