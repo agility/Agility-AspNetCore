@@ -4,10 +4,8 @@
     <UserSecretsId>3239af62-af73-4c90-af5c-e3997ae8ec4d</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Agility.AspNetCore" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.7" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Agility.AspNetCore\AgilityWebCore\AgilityWebCore.csproj" />
   </ItemGroup>
 </Project>
