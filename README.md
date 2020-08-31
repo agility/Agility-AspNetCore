@@ -1,6 +1,8 @@
 # Agility for .NET Core
 This is a starter template for developers who want to use ASP.NET Core.
 
+To upgrade to .NET Core 3.1 see [`Migrating Agility CMS to .NET Core 3.1`](https://agilitycms.zendesk.com/hc/en-us/articles/360048983591)
+
 It uses the open-source [`Agility.AspNetCore SDK`](https://github.com/agility/Agility.AspNetCore) which handles page routing, rendering, multi-language, redirections and syncing content from Agility CMS. Find a problem within the SDK? Open an [issue](https://github.com/agility/Agility.AspNetCore/issues).
 
 
