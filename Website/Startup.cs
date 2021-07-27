@@ -68,7 +68,7 @@ namespace Website
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseMiddleware<AgilityRedirectMiddleware>();
+            app.UseMiddleware<AgilityLanguageRedirectMiddleware>();
 
 
 			//configure the Agility Context 
