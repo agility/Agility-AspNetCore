@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 using Agility.Web;
+using Agility.Web.Middleware;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.Hosting;
@@ -68,9 +68,11 @@ namespace Website
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseMiddleware<AgilityRedirectMiddleware>();
 
-            //configure the Agility Context 
-            AgilityContext.Configure(app, env);
+
+			//configure the Agility Context 
+			AgilityContext.Configure(app, env);
 
 			app.UseStaticFiles();
 
